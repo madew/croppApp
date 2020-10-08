@@ -1,8 +1,18 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
+import router from './router';
+import store from './store';
+import VTooltip from 'v-tooltip';
+import 'boxicons';
 
-Vue.config.productionTip = false
+import 'nprogress/nprogress.css';
+
+Vue.use(VTooltip, { disposeTimeout: 500 });
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  router,
+  store,
+  render: h => h(App)
+}).$mount('#app');
